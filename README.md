@@ -15,7 +15,7 @@ A **TiTiler cookbook** for serving cloud-native rasters as dynamic map tiles, ST
 
 ## Repository role and status
 
-**Status:** Active, public — seeding. Pattern passes land in follow-up work from fleet-verified setups; the tables below list what is planned, not what is already written.
+**Status:** Active, public — first pattern pass written (design-only, gate 1 target; runtime validation pending). The tables below list the written patterns with their evidence levels.
 
 **What this repository is:** TiTiler patterns — COG tile serving, rescaling, STAC-backed endpoints, and statistics, against local files and object storage.
 
@@ -34,22 +34,28 @@ Geospatial developers and cloud engineers who store imagery as Cloud Optimized G
 - A COG to serve (see [cog-cookbook](https://github.com/ZQM-Computing/cog-cookbook) for creating one)
 - Bash
 
-## Patterns (planned)
+## Patterns
 
-| # | Example | What it will demonstrate |
-|---|---------|--------------------------|
-| 01 | `01-cog-tiles` | Serving a local COG as XYZ tiles, with `/cog/info` and tile endpoints |
-| 02 | `02-rescaling` | Rescaling float rasters (`rescale` parameters) so tiles render instead of failing |
-| 03 | `03-stac-endpoints` | STAC-backed tile and statistics endpoints against a pgSTAC catalog |
-| 04 | `04-statistics` | Band statistics and histograms over a window, without reading the whole raster |
-| 05 | `05-custom-application` | Extending the TiTiler application with a custom endpoint factory |
-| 06 | `06-full-workflow` | End-to-end: COG → catalog → tiles → statistics |
+| # | Example | Status | What it demonstrates |
+|---|---------|--------|----------------------|
+| 01 | [01-cog-tiles](examples/01-cog-tiles/README.md) | Written — design-only, gate 1 target | Serving a local COG as XYZ tiles, with `/cog/info` and tile endpoints |
+| 02 | [02-rescaling](examples/02-rescaling/README.md) | Written — design-only, gate 1 target | Rescaling float rasters (`rescale` parameters) so tiles render instead of failing |
+| 03 | [03-stac-endpoints](examples/03-stac-endpoints/README.md) | Written — design-only, gate 1 target | STAC-backed tile and statistics endpoints against a pgSTAC catalog |
+| 04 | [04-statistics](examples/04-statistics/README.md) | Written — design-only, gate 1 target | Band statistics and histograms over a window, without reading the whole raster |
+| 05 | [05-custom-application](examples/05-custom-application/README.md) | Written — design-only, gate 1 target | Extending the TiTiler application with a custom endpoint factory |
+| 06 | [06-full-workflow](examples/06-full-workflow/README.md) | Written — design-only, gate 1 target | End-to-end: COG → catalog → tiles → statistics |
 
 ## Repository layout
 
 ```text
 titiler-cookbook/
-├── examples/          # pattern passes, landing in follow-up work
+├── examples/
+│   ├── 01-cog-tiles/
+│   ├── 02-rescaling/
+│   ├── 03-stac-endpoints/
+│   ├── 04-statistics/
+│   ├── 05-custom-application/
+│   └── 06-full-workflow/
 ├── README.md
 └── LICENSE
 ```
