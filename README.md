@@ -11,7 +11,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A **TiTiler cookbook** for serving cloud-native rasters as dynamic map tiles, STAC endpoints, and statistics APIs. Patterns are drawn from the ZQM fleet's running TiTiler 0.25.0 installs (verified `/healthz` and `/redoc` on Node-1 and Node-3, serving sample COGs with tile and info endpoints). It is intended for GIS engineers and data engineers who serve imagery without pre-rendering tiles; validate each pattern against your own data, software versions, and operating environment before adopting it.
+A **TiTiler cookbook** for serving cloud-native rasters as dynamic map tiles, STAC endpoints, and statistics APIs. Patterns are drawn from the ZQM fleet's running TiTiler 0.25.0 installs (verified `/healthz` and `/redoc` on Node-1 and Node-3, serving sample COGs with tile and info endpoints) (as of Oct 2026; verify against the current fleet). It is intended for GIS engineers and data engineers who serve imagery without pre-rendering tiles; validate each pattern against your own data, software versions, and operating environment before adopting it.
 
 ## Repository role and status
 
